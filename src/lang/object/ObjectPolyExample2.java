@@ -32,7 +32,18 @@ public class ObjectPolyExample2 {
     // 만일 static이 붙지 않는다면, 해당 클래스에 소속된게 아닌 클래스를 통해 만들어진 인스턴스이기 때문에, 사용하기 위해서는
     // 객체를 먼저 생성 후 사용하여야한다.
     public static void size(Object[] object){
-
+        // 객체의 길이 측정
+        System.out.println("전달된 객체의 수 = " + object.length); // 배열에서 길이 잴 때는 length, 스트링에서는 length()
     }
 
 }
+
+
+/* 길이 측정
+array :: length > 배열은 한 번 생성시 크기가 절대 변하지 않음 >즉, 생성 되는 순간크기가 배열 객체의 '속성'으로 고정되기에 메소드가 아닌 상수 필드로 제공됨
+
+String :: length() > String은 java.lang.String이라는 클래스임. 클래스에서, 길이를 호출하는 메소드를 사용하기에 , length 뒤에 ()가 붙음
+
+list :: size() > 일반적으로 Length()는 "길이"를 의미함. 그러나 Size는 "크기" (현재 담겨 있는 요소의 개수)를 의미함
+즉 길이가 10인 리스트를 생성했을 때 내부적으로는 10칸짜리 배열이나, 데이터를 5개 넣으면, size()는 5를 반환함
+* */
